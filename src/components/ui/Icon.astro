@@ -1,0 +1,28 @@
+---
+interface Props {
+  name: string;
+  class?: string;
+}
+
+const { name, class: className } = Astro.props as Props;
+
+const icons: Record<string, any> = {
+  react: await import("../../../public/icons/react.svg"),
+  nextjs: await import("../../../public/icons/nextdotjs.svg"),
+  astro: await import("../../../public/icons/astro.svg"),
+  tailwind: await import("../../../public/icons/tailwindcss.svg"),
+  node: await import("../../../public/icons/nodedotjs.svg"),
+  express: await import("../../../public/icons/express.svg"),
+  mongodb: await import("../../../public/icons/mongodb.svg"),
+  postgresql: await import("../../../public/icons/postgresql.svg"),
+  mysql: await import("../../../public/icons/mysql.svg"),
+  javascript: await import("../../../public/icons/javascript.svg"),
+  typescript: await import("../../../public/icons/typescript.svg"),
+};
+
+const IconComponent = icons[name]?.default;
+---
+
+{IconComponent && (<div class={className ?? "w-10 h-10"}>
+    <IconComponent class="w-full h-full text-white fill-current" />
+  </div>)}

@@ -1,0 +1,85 @@
+---
+import Container from "../ui/Container.astro";
+import Badge from "../ui/Badge.astro";
+import Card from "../ui/Card.astro";
+import Button from "../ui/Button.astro";
+
+import { realProjects, templateIdeas } from "../../data/projects.js";
+---
+
+<section id="projects" class="py-20">
+  <Container>
+    <div class="mb-12 text-center">
+      <div class="mb-4 flex justify-center">
+        <Badge text="PROYECTOS" />
+      </div>
+      <h2 class="text-3xl font-bold text-white md:text-4xl">
+        Trabajo real + ideas listas para convertir en producto
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-white/60">
+        Aquí separo lo que ya construí de lo que puedo ofrecer como plantillas o demos para clientes.
+      </p>
+    </div>
+
+    
+    <div class="mb-14">
+      <h3 class="mb-6 text-xl font-semibold text-white"> Proyectos hechos</h3>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {realProjects.map((p) => (
+          <Card class="p-0 overflow-hidden">
+            <img src={p.image} alt={p.title} class="h-56 w-full object-cover" loading="lazy" />
+
+            <div class="p-6">
+              <h4 class="text-lg font-semibold text-white">{p.title}</h4>
+              <p class="mt-2 text-sm text-white/60">{p.description}</p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                {p.tags.map((t) => (
+                  <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div class="mt-6 flex gap-3">
+                <Button variant="secondary" href={p.demo}>Demo</Button>
+                <Button variant="ghost" href={p.code}>Código</Button>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="mb-6 text-xl font-semibold text-white">Ideas de plantillas para páginas web</h3>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {templateIdeas.map((p) => (
+          <Card class="p-0 overflow-hidden">
+            <img src={p.image} alt={p.title} class="h-56 w-full object-cover" loading="lazy" />
+
+            <div class="p-6">
+              <h4 class="text-lg font-semibold text-white">{p.title}</h4>
+              <p class="mt-2 text-sm text-white/60">{p.description}</p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                {p.tags.map((t) => (
+                  <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div class="mt-6 flex gap-3">
+                <Button variant="secondary" href={p.demo}>Ver idea</Button>
+                <Button variant="ghost" href={p.code}>Repositorio</Button>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>

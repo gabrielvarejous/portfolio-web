@@ -1,0 +1,27 @@
+---
+import Container from "../ui/Container.astro";
+import Button from "../ui/Button.astro";
+---
+
+<nav class="fixed top-0 w-full backdrop-blur border-b border-white/10 bg-black/40 z-50">
+  <Container class="flex items-center justify-between h-16">
+
+    <div class="text-white font-bold text-lg">
+      Gabriel<span class="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">.dev</span>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-sm text-white/70">
+      <a href="#about" class="hover:text-white transition">Sobre mí</a>
+      <a href="#tech" class="hover:text-white transition">Tecnologías</a>
+      <a href="#projects" class="hover:text-white transition">Proyectos</a>
+      <a href="#contact" class="hover:text-white transition">Contacto</a>
+    </div>
+
+    <div class="hidden md:block">
+      <Button variant="primary" href="#contact">
+        Hablemos
+      </Button>
+    </div>
+
+  </Container>
+</nav>

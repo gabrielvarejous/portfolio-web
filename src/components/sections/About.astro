@@ -1,0 +1,45 @@
+---
+import Container from "../ui/Container.astro";
+import Badge from "../ui/Badge.astro";
+
+const imageSrc = "/images/about.jpg"; // cambia por tu imagen
+
+---
+
+<section id="about" class="py-20">
+  <Container>
+    <div class="grid gap-12 md:grid-cols-2 md:items-center">
+
+      <!-- Imagen -->
+      <div class="relative">
+        <div class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <img
+            src={imageSrc}
+            alt="Setup de desarrollo"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div>
+        <div class="mb-4">
+          <Badge text="SOBRE MÍ" />
+        </div>
+
+        <h2 class="text-3xl font-bold text-white md:text-4xl">
+          Transformando ideas en experiencias digitales.
+        </h2>
+
+        <p class="mt-6 text-white/60 leading-relaxed">
+          Soy desarrollador especializado en la creación de aplicaciones web modernas.
+          Con un enfoque en código limpio, arquitectura escalable y buen diseño,
+          convierto problemas complejos en soluciones elegantes.
+        </p>
+
+      </div>
+
+    </div>
+  </Container>
+</section>

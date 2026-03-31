@@ -1,0 +1,59 @@
+---
+import Container from "../ui/Container.astro";
+import Button from "../ui/Button.astro";
+import Badge from "../ui/Badge.astro";
+
+const name = "Gabriel";
+
+const avatarSrc = "/images/avatar.png";
+---
+
+<section class="relative overflow-hidden pt-16 md:pt-24">
+
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-[-220px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
+    <div class="absolute left-1/2 top-[120px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
+  </div>
+
+  <Container class="relative">
+    <div class="mx-auto max-w-3xl text-center">
+
+      <div class="mx-auto mb-6 grid place-items-center">
+        <div class="h-34 w-34 overflow-hidden rounded-full border border-white/15 bg-white/5 shadow-[0_0_0_8px_rgba(255,255,255,0.03)]">
+          <img
+            src={avatarSrc}
+            alt={`Foto de ${name}`}
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="mb-5 flex justify-center">
+        <Badge text="DISPONIBLE PARA NUEVOS PROYECTOS" />
+      </div>
+
+      <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-6xl">
+        Hola, soy{" "}
+        <span class="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
+          {name}
+        </span>
+      </h1>
+
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+        Software Developer creando experiencias digitales de alto nivel, con foco
+        en performance, diseño y soluciones limpias.
+      </p>
+
+      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Button variant="secondary" href="#projects">
+          Ver Proyectos
+        </Button>
+
+        <Button variant="ghost" href="#contact" class="px-6">
+          Descargar CV
+        </Button>
+      </div>
+    </div>
+  </Container>
+</section>

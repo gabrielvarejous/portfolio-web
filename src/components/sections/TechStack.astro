@@ -1,0 +1,36 @@
+---
+import Container from "../ui/Container.astro";
+import Badge from "../ui/Badge.astro";
+import Card from "../ui/Card.astro";
+import Icon from "../ui/Icon.astro";
+
+import { stacks } from "../../data/stacks.js";
+---
+
+<section id="tech" class="py-20">
+  <Container>
+    <div class="mb-12 text-center">
+      <div class="mb-4 flex justify-center">
+        <Badge text="TECNOLOGÍAS" />
+      </div>
+      <h2 class="text-3xl font-bold text-white md:text-4xl">
+        Herramientas que uso para construir productos reales.
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-white/60">
+        Selección de tecnologías enfocadas en performance, escalabilidad y una buena experiencia de usuario.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap pt-10 gap-4 justify-center">
+      {stacks.flatMap((stack) => stack.technologies).map((tech) => (
+          <div class="group flex items-center gap-2 border-white/10 px-3 py-2 rounded-lg transition-all duration-300 hover:bg-white/5 hover:scale-120 cursor-default">
+            <Icon name={tech.icon} class="w-12 h-12 transition-all duration-300 group-hover:text-200 group-hover:drop-shadow-[0_0_6px_violet]"/>
+            <span class="text-white/80 text-lg group-hover:text-cyan-500 transition-colors duration-300">
+              {tech.name}
+              </span>
+          </div>
+            ))}
+    </div>
+    </div>
+  </Container>
+</section>

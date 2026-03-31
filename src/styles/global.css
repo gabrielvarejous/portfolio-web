@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+.body-main {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image:
+    radial-gradient(at 100% 3%, hsla(189, 85%, 16%, 1) 0px, transparent 50%),
+    radial-gradient(at 22% 95%, hsla(266, 93%, 19%, 1) 0px, transparent 50%);
+  min-height: 100vh;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 64px;
+}

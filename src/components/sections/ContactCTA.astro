@@ -1,0 +1,62 @@
+---
+import Container from "../ui/Container.astro";
+import Card from "../ui/Card.astro";
+import Badge from "../ui/Badge.astro";
+
+const email = "gabvallejos94@gmail.com";
+
+// Cambia estos links luego
+const links = [
+  { label: "GitHub", href: "#" },
+  { label: "LinkedIn", href: "#" },
+  { label: "Twitter", href: "#" },
+];
+---
+
+<section id="contact" class="py-24">
+  <Container>
+    <Card class="relative overflow-hidden p-10 md:p-14">
+      <!-- Fondo con gradiente suave -->
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
+        <div class="absolute -bottom-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10" />
+      </div>
+
+      <div class="relative text-center">
+        <div class="mb-4 flex justify-center">
+          <Badge text="CONTACTO" />
+        </div>
+
+        <h2 class="text-3xl font-extrabold text-white md:text-5xl">
+          ¿Tienes un proyecto en mente?
+        </h2>
+
+        <p class="mx-auto mt-4 max-w-2xl text-white/60">
+          Estoy disponible para trabajos freelance y colaboraciones. Si tienes una idea,
+          podemos convertirla en una web moderna y rápida.
+        </p>
+
+        <a
+          href={`mailto:${email}`}
+          class="mt-8 inline-block text-2xl font-bold text-white underline decoration-white/30 underline-offset-8 hover:decoration-white/70 transition"
+        >
+          {email}
+        </a>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          {links.map((l) => (
+            <a
+              href={l.href}
+              class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white transition"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </Card>
+  </Container>
+</section>
