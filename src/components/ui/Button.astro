@@ -1,4 +1,5 @@
 ---
+
 type Variant = 'primary' | 'secondary' | 'ghost';
 
 interface Props {
@@ -21,16 +22,22 @@ const variants = {
     ghost: 'border border-white/20 text-white hover:bg-white/10',
 }
 
-const styles = `${base} ${variants[variant]} ${className}`
+const isExternal = href?.startsWith('http')
+
+const isDisabled = !href || href === "#"
+
+const disableStyles = isDisabled ? 'opacity-50 cursor-not-allowed' : '';
+
+const styles = `${base} ${variants[variant]} ${disableStyles} ${className}`
 ---
 
-{ href ? (
-    <a href={href} class={styles}>
-        <slot />
-    </a>
-) : (
+{ isDisabled ? (
     <button class={styles}>
         <slot />
     </button>
+) : (
+    <a href={href} class={styles} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
+        <slot />
+    </a>
 )
 }

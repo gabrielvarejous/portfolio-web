@@ -1,17 +1,18 @@
 export const realProjects = [
   {
-    title: "PawRescue",
-    description: "Landing para rescate animal con Astro + Tailwind.",
-    tags: ["Astro", "Tailwind", "UI"],
-    image: "/images/projects/pawrescue.jpg",
-    demo: "#",
+    title: "Shalom Group Panama Portfolio",
+    description:
+      "Landing para mostrar los trabajos hechos y tipos que se realizan.",
+    tags: ["React", "Tailwind", "UI"],
+    image: "/public/shalomgroup.webp",
+    demo: "https://www.shalomgrouppa-portfolio.com",
     code: "#",
   },
   {
-    title: "Boquete Services API",
-    description: "API REST para servicios locales, autenticación y endpoints.",
-    tags: ["Node.js", "Express", "PostgreSQL"],
-    image: "/images/projects/boquete-api.jpg",
+    title: "Inventario de herramientas",
+    description: "Inventario de herramientas para Shalom Group Panama.",
+    tags: ["Node.js", "Express", "MongoDB", "React"],
+    image: "/public/inventario.webp",
     demo: "#",
     code: "#",
   },
@@ -19,18 +20,11 @@ export const realProjects = [
 
 export const templateIdeas = [
   {
-    title: "Plantilla Restaurante",
-    description: "Landing moderna con menú, reservas y sección de reseñas.",
-    tags: ["Astro", "Tailwind", "SEO"],
+    title: "PawRescue",
+    description:
+      "Landing moderna que sirve como plantilla de información para los usuarios.",
+    tags: ["Astro", "Tailwind"],
     image: "/images/templates/restaurante.jpg",
-    demo: "#",
-    code: "#",
-  },
-  {
-    title: "Plantilla Clínica / Veterinaria",
-    description: "Web con servicios, doctores, horarios y CTA de cita.",
-    tags: ["Astro", "UI", "Accesibilidad"],
-    image: "/images/templates/clinica.jpg",
     demo: "#",
     code: "#",
   },
