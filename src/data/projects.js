@@ -4,7 +4,7 @@ export const realProjects = [
     description:
       "Landing para mostrar los trabajos hechos y tipos que se realizan.",
     tags: ["React", "Tailwind", "UI"],
-    image: "/public/shalomgroup.webp",
+    image: "shalomgroup.webp",
     demo: "https://www.shalomgrouppa-portfolio.com",
     code: "#",
   },
@@ -12,7 +12,7 @@ export const realProjects = [
     title: "Inventario de herramientas",
     description: "Inventario de herramientas para Shalom Group Panama.",
     tags: ["Node.js", "Express", "MongoDB", "React"],
-    image: "/public/inventario.webp",
+    image: "inventario.webp",
     demo: "#",
     code: "#",
   },
