@@ -24,8 +24,8 @@ export const templateIdeas = [
     description:
       "Landing moderna que sirve como plantilla de información para los usuarios.",
     tags: ["Astro", "Tailwind"],
-    image: "/images/templates/restaurante.jpg",
-    demo: "#",
+    image: "pawrescue.webp",
+    demo: "https://pawrescue-omega.vercel.app/",
     code: "#",
   },
 ];
